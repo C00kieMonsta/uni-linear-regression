@@ -3,7 +3,7 @@ import numpy as np
 import sys
 import os
 
-path_to_folder = '/Users/antoineboxho/Developer/personal/learnings/python/machine-learning/playground/linear-regression'
+path_to_folder = '/Users/antoineboxho/Developer/personal/learnings/python/machine-learning/playground/uni-linear-regression'
 
 sys.path.append(path_to_folder)
 
