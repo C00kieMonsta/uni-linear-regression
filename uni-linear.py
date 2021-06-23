@@ -12,10 +12,10 @@ m = data.shape[0]
 ones = np.ones((m,1))
 X_tmp = data[:,0]
 X = np.c_[ones, X_tmp]
-y = data[:,1].reshape(m,1)
+y = data[:, 1]
 
 # 3// helper variables
-theta_init = np.zeros((2, 1))
+theta_init = np.zeros(2)
 iterations = 1500
 alpha = 0.01
 
