@@ -13,13 +13,8 @@ def gradient_descent(X, y, theta, alpha, iterations):
     m = len(y)
     cost_history = []
     for i in range(iterations):
-        theta_tmp = theta
+        theta = theta - (alpha/m)*np.dot(X.T, np.dot(X,theta)-y)
         cost_history.append(compute_cost(X, y, theta))
-        for j in range(len(theta_tmp)):
-            h = np.dot(X, theta_tmp)
-            x_j = X[:,j].reshape(m,1)
-            theta_tmp[j] = theta_tmp[j] - (alpha/m)*np.sum((h - y)*x_j)
-        theta = theta_tmp
     return theta, cost_history
 
 def show_data(x, y, x_label='x', y_label='y'):

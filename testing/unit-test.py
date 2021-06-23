@@ -23,5 +23,10 @@ class TestHelpers(unittest.TestCase):
         np.testing.assert_almost_equal(helpers.compute_cost(self.X, self.y, np.array([[-1],[2]])), 54.24, decimal=2)
         np.testing.assert_almost_equal(helpers.compute_cost(self.X, self.y, np.array([[0],[0]])), 32.07, decimal=2)
 
+    def test_gradient_descent_function(self):
+        theta, J_history = helpers.gradient_descent(self.X, self.y, np.zeros((2, 1)), 0.01, 1500)
+        np.testing.assert_almost_equal(theta[0], -3.6303, decimal=4)
+        np.testing.assert_almost_equal(theta[1], 1.1664, decimal=4)
+
 if __name__ == '__main__':
     unittest.main()
